@@ -69,7 +69,7 @@ public class ShortCircuitDemo {
 
 
     // 주소 할당해서 값을 변경하면 다른 객체 값도 변하는지 확인
-    
+
     ClassTest testC = new ClassTest(1, "test");
     ClassTest testC2 = new ClassTest(2, "hello");
 
