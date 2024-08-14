@@ -27,7 +27,11 @@ public class MultiIfDemo {
     String grade = "";
 
     if (score >= 90) {
-      grade = "A";
+      if (score >= 95) {
+        grade = "A+";
+      } else {
+        grade = "A0";
+      }
     } else if (score >= 80) {
       grade = "B";
     } else if (score >= 70) {
