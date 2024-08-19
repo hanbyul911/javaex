@@ -12,5 +12,6 @@ public class CircleDemo {
 
     circle.printRadius();
     System.out.println("원의 넓이 : " + circle.getArea());
+    System.out.println("반올림한 원의 넓이 : " + Math.round(circle.getArea()));
   }
 }
