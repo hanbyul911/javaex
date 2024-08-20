@@ -20,6 +20,10 @@ class Circle {
     System.out.println("원의 반지름 : " + radius);
   }
 
+  public Circle(int radius) {
+    this.radius = radius;
+  }
+
   /**
    * 원의 넓이를 구하여 반환하는 메서드
    * 매개변수 X 리턴값 O (double)
@@ -39,5 +43,11 @@ class Circle {
     } else {
       this.radius = radius;
     }
+  }
+
+  @Override
+  public String toString() {
+    return "원의 반지름이 " + getRadius() + "이고," +
+        "넓이가 " + getArea() + "인 원입니다.";
   }
 }
