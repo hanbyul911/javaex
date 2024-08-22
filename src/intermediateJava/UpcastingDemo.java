@@ -14,6 +14,7 @@ public class UpcastingDemo {
     // upcasting 하는 경우 부모 클래스가 가지고 있는 필드와 메서드만 사용 가능하다.
 
     // 부모 클래스의 배열로 업캐스팅해서 배열에 넣으면 기존 코드를 수정하지 않아도 되는 solid 함
+    // 만약 각각의 객체를 따로 다뤄야 하면 메서드도 다 오버로딩하는 번거로움이 있다.
     Person[] persons = new Person[5];
     persons[0] = new Student();
     System.out.println(persons[0].seq);
@@ -25,6 +26,9 @@ public class UpcastingDemo {
     System.out.println(persons[3].seq);
     persons[4] = new Employee();
     System.out.println(persons[4].seq);
+
+    Student student = (Student) persons[0];
+    student.work();
   }
 }
 

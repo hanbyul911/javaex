@@ -2,7 +2,7 @@ package intermediateJava;
 
 public class FigureInheritDemo {
   public static void main(String[] args) {
-    Triangle triangle = new Triangle(3, 3, 3);
+    Triangle triangle = new Triangle(3, 3);
     double triArea = triangle.getArea();
     System.out.println(triArea);
 
@@ -24,15 +24,20 @@ class Triangle extends Figure {
   private int height;
   private int width;
 
-  public Triangle(int height, int width, int poly) {
+  public Triangle(int height, int width) {
     this.height = height;
     this.width = width;
-    this.poly = poly;
+    this.poly = 3;
   }
 
   @Override
   public double getArea() {
     return width * height / (double) 2;
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    return (obj instanceof Triangle t && t.getArea() == this.getArea());
   }
 }
 class Rectangle extends Figure {
