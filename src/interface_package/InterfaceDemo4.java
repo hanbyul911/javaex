@@ -1,5 +1,9 @@
 package interface_package;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+
 public class InterfaceDemo4 {
   public static void main(String[] args) {
     /*controllable 객체배열을 이용(TV와 컴퓨터객체를 배열에 저장)
@@ -11,6 +15,7 @@ public class InterfaceDemo4 {
       c.turnOff();
       c.repair();
     }
+
     Controllable.reset();
   }
 }
