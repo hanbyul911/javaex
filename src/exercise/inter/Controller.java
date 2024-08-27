@@ -1,4 +1,4 @@
-package exercise;
+package exercise.inter;
 
 abstract class Controller {
   boolean power;

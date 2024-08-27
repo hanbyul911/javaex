@@ -1,4 +1,4 @@
-package exercise;
+package exercise.inter;
 
 public class HumanTest {
   public static void main(String[] args) {

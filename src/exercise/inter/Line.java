@@ -1,4 +1,4 @@
-package exercise;
+package exercise.inter;
 
 public class Line implements Comparable{
   int length;

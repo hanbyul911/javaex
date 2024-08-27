@@ -1,4 +1,4 @@
-package exercise;
+package exercise.inter;
 
 public interface Talkable {
   void talk();

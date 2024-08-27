@@ -1,6 +1,4 @@
-package exercise;
-
-import java.util.Arrays;
+package exercise.inter;
 
 public class LineTest {
   public static void main(String[] args) {

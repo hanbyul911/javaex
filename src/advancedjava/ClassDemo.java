@@ -1,6 +1,6 @@
 package advancedjava;
 
-import exercise.Line;
+import exercise.inter.Line;
 
 public class ClassDemo {
   public static void main(String[] args) {

@@ -1,9 +1,6 @@
 package advancedjava;
 
-import exercise.Line;
-
 import java.util.ArrayList;
-import java.util.LinkedHashMap;
 import java.util.LinkedList;
 
 public class SystemDemo {

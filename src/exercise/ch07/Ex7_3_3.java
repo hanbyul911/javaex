@@ -1,7 +1,6 @@
-package exercise;
+package exercise.ch07;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class Ex7_3_3 {
   public static void main(String[] args) {
