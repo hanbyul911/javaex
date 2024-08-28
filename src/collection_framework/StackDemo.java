@@ -19,7 +19,7 @@ public class StackDemo {
     // System.out.println(st);
     System.out.println(st.search("a"));
     System.out.println(st.search("c"));
-    // top에서부터 몇 번째에 존재하는지 즉, idx와 반대 숫자
+    // top에서부터 몇 번째에 존재하는지 즉, idx와 반대 숫자, idx는 0부터 search는 1부터 시작한다.
 
     while (!st.empty()) {
       System.out.println(st.pop());
