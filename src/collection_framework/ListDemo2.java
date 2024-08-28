@@ -13,6 +13,12 @@ public class ListDemo2 {
 
     List<String> sList2 = new ArrayList<>(sList);
     sList2.add("기린");
+    // System.out.println(sList2);
+
+    sList2.forEach(s -> System.out.print(s + " "));
+    sList2.removeIf(s -> s.length() == 2);
     System.out.println(sList2);
+    // sList2.forEach(s -> System.out.print(s + " "));
+
   }
 }
