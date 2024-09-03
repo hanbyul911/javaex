@@ -5,7 +5,7 @@ import java.util.StringTokenizer;
 
 public class BankService {
   private final Bank bank;
-  private final Banker banker = new Banker(BankCode.KAKAKO, "employee");
+  private final Banker banker = new Banker(BankCode.KAKAO, "employee");
   // 직원을 연결하는 코드 구현
 
   public BankService(Bank bank) {
@@ -25,6 +25,7 @@ public class BankService {
     System.out.println("계좌번호, 생년월일 8자리를 ,로 구분해 입력해주세요.");
     StringTokenizer st = new StringTokenizer(sc.nextLine(), ", ");
     Input newInput = new Input(st.nextToken(), st.nextToken());
+    System.out.print("입금하실 금액을 입력해주세요 : ");
     long money = Long.parseLong(sc.nextLine());
 
     // 현금 입금,인출의 경우 10으로 나눠떨어지는 수만 받게 조건걸어야 함
@@ -51,6 +52,7 @@ public class BankService {
     System.out.println("계좌번호, 생년월일 8자리, 비밀번호를 ,로 구분해 입력해주세요.");
     StringTokenizer st = new StringTokenizer(sc.nextLine(), ", ");
     Input newInput = new Input(st.nextToken(), st.nextToken(), st.nextToken());
+    System.out.print("출금하실 금액을 입력해주세요 : ");
     long money = Long.parseLong(sc.nextLine());
 
     // 현금 입금,인출의 경우 10으로 나눠떨어지는 수만 받게 조건걸어야 함

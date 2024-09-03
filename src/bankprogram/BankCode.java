@@ -1,5 +1,5 @@
 package bankprogram;
 
 enum BankCode {
-  WOORI, HANA, SHINHAN, KAKAKO, KB, BOOSAN, CITY, IBK, NH, SH;
+  WOORI, HANA, SHINHAN, KAKAO, KB, BOOSAN, CITY, IBK, NH, SH;
 }
