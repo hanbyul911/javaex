@@ -26,6 +26,13 @@ public class BankService {
     StringTokenizer st = new StringTokenizer(sc.nextLine(), ", ");
     Input newInput = new Input(st.nextToken(), st.nextToken());
     long money = Long.parseLong(sc.nextLine());
+
+    // 현금 입금,인출의 경우 10으로 나눠떨어지는 수만 받게 조건걸어야 함
+    // 전자거래의 경우 1원 단위 거래가 가능하므로 따로 조건 걸지 않음
+    if (money < 0) {
+      System.out.println("입금 금액이 잘못 입력되었습니다.");
+      return;
+    }
     BankStatementE bs = new BankStatementE(null, BankStatement.입금, banker);;
 
     try {
@@ -45,6 +52,13 @@ public class BankService {
     StringTokenizer st = new StringTokenizer(sc.nextLine(), ", ");
     Input newInput = new Input(st.nextToken(), st.nextToken(), st.nextToken());
     long money = Long.parseLong(sc.nextLine());
+
+    // 현금 입금,인출의 경우 10으로 나눠떨어지는 수만 받게 조건걸어야 함
+    // 전자거래의 경우 1원 단위 거래가 가능하므로 따로 조건 걸지 않음
+    if (money < 0) {
+      System.out.println("출금 금액이 잘못 입력되었습니다.");
+      return;
+    }
     BankStatementE bs = new BankStatementE(null, BankStatement.출금, banker);;
 
     try {

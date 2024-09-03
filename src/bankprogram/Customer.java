@@ -13,9 +13,6 @@ class Customer {
   LocalDateTime registerTime;
   LocalDateTime finalTransactionDate;
 
-  /**
-   * @param id = 고객번호, name = 고객이름, birthday = 고객생년월일
-   */
   public Customer(String id, String name) {
     this.customerId = id;
     this.name = name;
@@ -31,18 +28,25 @@ class Customer {
   public Account creatAccount(Bank bank, String password) {
     Account a = new Account(this, bank, password);
     accounts.put(a.getAccountNumber(), a);
+    setFinalTransactionDate();
     return a;
   }
 
   public void closeAccount(Input input) {
     if (accounts.containsKey(input.getAccountNumber())) {
       if (accounts.get(input.getAccountNumber()).closeAccount(input)) {
-        accounts.remove(input.getAccountNumber());
+        // accounts.remove(input.getAccountNumber());
+        // 리스트에서 지우지 말고 상태만 변환할것. -> 중복된 계좌 생성 X 추후 조회하기 위해서
       } else {
         System.out.println("계좌 해지에 실패하였습니다.");
       }
     } else {
       System.out.println("해당하는 계좌가 없습니다.");
     }
+    setFinalTransactionDate();
+  }
+
+  public void setFinalTransactionDate() {
+    finalTransactionDate = LocalDateTime.now();
   }
 }
