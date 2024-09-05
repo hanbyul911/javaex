@@ -26,7 +26,7 @@ public class DBDemo5 {
 
       pstmt.setString(1, phone);
       rs = pstmt.executeQuery();
-      if (rs.getRow() == 0) {
+      if (!rs.isBeforeFirst()) {
         System.out.println("조회에 실패하였습니다.");
       } else {
         while (rs.next()) {

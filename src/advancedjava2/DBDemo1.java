@@ -17,9 +17,9 @@ public class DBDemo1 {
     String query = "insert into person (name, phone, email) values (?, ?, ?)";
     PreparedStatement pstmt = conn.prepareStatement(query);
 
-    pstmt.setString(1, "kim");
+    pstmt.setString(1, "han");
     pstmt.setString(2, "010-0101-1010");
-    pstmt.setString(3, "kim@a.com");
+    pstmt.setString(3, "han@a.com");
     int rs = pstmt.executeUpdate();
     if (rs == 0) {
       System.out.println("데이터 추가가 정상적으로 진행되지 않았습니다.");
@@ -29,7 +29,7 @@ public class DBDemo1 {
   }
 
   public static Connection makeConnection() {
-    String url = "jdbc:mysql://localhost/javaex?serverTimezone=Asia/Seoul";
+    String url = "jdbc:mysql://localhost:3306/javaex?serverTimezone=Asia/Seoul";
     Connection conn = null;
     try {
       Class.forName("com.mysql.cj.jdbc.Driver");
